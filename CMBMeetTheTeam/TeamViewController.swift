@@ -8,22 +8,36 @@
 
 import UIKit
 import SwiftyJSON
-import SnapKit
 
 
-
-class TeamViewController: UIViewController {
+class TeamCollectionViewController: UICollectionViewController {
+    let numberOfSections = 2
+    let memberCellIdentifier = "memberCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        collectionView?.backgroundColor = UIColor.red
+        collectionView?.register(MemberCollectionViewCell.self, forCellWithReuseIdentifier: memberCellIdentifier)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return numberOfSections
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: memberCellIdentifier, for: indexPath)
+        return cell
+    }
 
+}
+
+extension TeamCollectionViewController: UICollectionViewDelegateFlowLayout {
+    
 
 }
 
