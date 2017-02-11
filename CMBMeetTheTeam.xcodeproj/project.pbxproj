@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F076C8A1E4FC5C7003512FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F076C891E4FC5C7003512FA /* AppDelegate.swift */; };
+		3F076C8C1E4FC5C7003512FA /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F076C8B1E4FC5C7003512FA /* TeamViewController.swift */; };
+		3F076C8F1E4FC5C7003512FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F076C8D1E4FC5C7003512FA /* Main.storyboard */; };
+		3F076C911E4FC5C7003512FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F076C901E4FC5C7003512FA /* Assets.xcassets */; };
+		3F076C941E4FC5C7003512FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F076C921E4FC5C7003512FA /* LaunchScreen.storyboard */; };
+		3F5C956B1E4FC8550067DD0C /* team.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F5C956A1E4FC8550067DD0C /* team.json */; };
+		774B563B160AD9C032359B4B /* Pods_CMBMeetTheTeam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 084C1C5FFA61FA146A382AA1 /* Pods_CMBMeetTheTeam.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		084C1C5FFA61FA146A382AA1 /* Pods_CMBMeetTheTeam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CMBMeetTheTeam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2392BCC4F2DCF11B37691489 /* Pods-CMBMeetTheTeam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMBMeetTheTeam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CMBMeetTheTeam/Pods-CMBMeetTheTeam.debug.xcconfig"; sourceTree = "<group>"; };
+		3F076C861E4FC5C7003512FA /* CMBMeetTheTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CMBMeetTheTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F076C891E4FC5C7003512FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3F076C8B1E4FC5C7003512FA /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
+		3F076C8E1E4FC5C7003512FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3F076C901E4FC5C7003512FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F076C931E4FC5C7003512FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F076C951E4FC5C7003512FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F5C956A1E4FC8550067DD0C /* team.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = team.json; path = ../../../Desktop/team.json; sourceTree = "<group>"; };
+		79F898DDBC0493461B3D6D71 /* Pods-CMBMeetTheTeam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMBMeetTheTeam.release.xcconfig"; path = "Pods/Target Support Files/Pods-CMBMeetTheTeam/Pods-CMBMeetTheTeam.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F076C831E4FC5C6003512FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				774B563B160AD9C032359B4B /* Pods_CMBMeetTheTeam.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F076C7D1E4FC5C6003512FA = {
+			isa = PBXGroup;
+			children = (
+				3F076C881E4FC5C7003512FA /* CMBMeetTheTeam */,
+				3F076C871E4FC5C7003512FA /* Products */,
+				B30D4DC5192D77D0241C4271 /* Pods */,
+				AF037625ACB11046F68E63E4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3F076C871E4FC5C7003512FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F076C861E4FC5C7003512FA /* CMBMeetTheTeam.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F076C881E4FC5C7003512FA /* CMBMeetTheTeam */ = {
+			isa = PBXGroup;
+			children = (
+				3F5C956A1E4FC8550067DD0C /* team.json */,
+				3F076C891E4FC5C7003512FA /* AppDelegate.swift */,
+				3F076C8B1E4FC5C7003512FA /* TeamViewController.swift */,
+				3F076C8D1E4FC5C7003512FA /* Main.storyboard */,
+				3F076C901E4FC5C7003512FA /* Assets.xcassets */,
+				3F076C921E4FC5C7003512FA /* LaunchScreen.storyboard */,
+				3F076C951E4FC5C7003512FA /* Info.plist */,
+			);
+			path = CMBMeetTheTeam;
+			sourceTree = "<group>";
+		};
+		AF037625ACB11046F68E63E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				084C1C5FFA61FA146A382AA1 /* Pods_CMBMeetTheTeam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B30D4DC5192D77D0241C4271 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2392BCC4F2DCF11B37691489 /* Pods-CMBMeetTheTeam.debug.xcconfig */,
+				79F898DDBC0493461B3D6D71 /* Pods-CMBMeetTheTeam.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F076C851E4FC5C6003512FA /* CMBMeetTheTeam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F076C981E4FC5C7003512FA /* Build configuration list for PBXNativeTarget "CMBMeetTheTeam" */;
+			buildPhases = (
+				79DBACB62BCF22A9DD569B29 /* [CP] Check Pods Manifest.lock */,
+				3F076C821E4FC5C6003512FA /* Sources */,
+				3F076C831E4FC5C6003512FA /* Frameworks */,
+				3F076C841E4FC5C6003512FA /* Resources */,
+				A0A9AA8650150B6C29EBDFA4 /* [CP] Embed Pods Frameworks */,
+				55748A170AA3F4749733084B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CMBMeetTheTeam;
+			productName = CMBMeetTheTeam;
+			productReference = 3F076C861E4FC5C7003512FA /* CMBMeetTheTeam.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F076C7E1E4FC5C6003512FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Forrest Zhao";
+				TargetAttributes = {
+					3F076C851E4FC5C6003512FA = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3F076C811E4FC5C6003512FA /* Build configuration list for PBXProject "CMBMeetTheTeam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F076C7D1E4FC5C6003512FA;
+			productRefGroup = 3F076C871E4FC5C7003512FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F076C851E4FC5C6003512FA /* CMBMeetTheTeam */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F076C841E4FC5C6003512FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5C956B1E4FC8550067DD0C /* team.json in Resources */,
+				3F076C941E4FC5C7003512FA /* LaunchScreen.storyboard in Resources */,
+				3F076C911E4FC5C7003512FA /* Assets.xcassets in Resources */,
+				3F076C8F1E4FC5C7003512FA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55748A170AA3F4749733084B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CMBMeetTheTeam/Pods-CMBMeetTheTeam-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79DBACB62BCF22A9DD569B29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A0A9AA8650150B6C29EBDFA4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CMBMeetTheTeam/Pods-CMBMeetTheTeam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F076C821E4FC5C6003512FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F076C8C1E4FC5C7003512FA /* TeamViewController.swift in Sources */,
+				3F076C8A1E4FC5C7003512FA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3F076C8D1E4FC5C7003512FA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F076C8E1E4FC5C7003512FA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3F076C921E4FC5C7003512FA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F076C931E4FC5C7003512FA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F076C961E4FC5C7003512FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F076C971E4FC5C7003512FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F076C991E4FC5C7003512FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2392BCC4F2DCF11B37691489 /* Pods-CMBMeetTheTeam.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CMBMeetTheTeam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ForrestApps.CMBMeetTheTeam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3F076C9A1E4FC5C7003512FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79F898DDBC0493461B3D6D71 /* Pods-CMBMeetTheTeam.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CMBMeetTheTeam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ForrestApps.CMBMeetTheTeam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F076C811E4FC5C6003512FA /* Build configuration list for PBXProject "CMBMeetTheTeam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F076C961E4FC5C7003512FA /* Debug */,
+				3F076C971E4FC5C7003512FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F076C981E4FC5C7003512FA /* Build configuration list for PBXNativeTarget "CMBMeetTheTeam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F076C991E4FC5C7003512FA /* Debug */,
+				3F076C9A1E4FC5C7003512FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F076C7E1E4FC5C6003512FA /* Project object */;
+}
