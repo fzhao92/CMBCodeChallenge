@@ -10,27 +10,21 @@ import Foundation
 
 import UIKit
 
-typealias JSON = [String: Any]
-
 class Member {
     var avatarURL: String
     var firstName: String
     var lastName: String
     var id: String
     var title: String
+    var bio: String
     var avatar: UIImage?
     
-    init(dict: JSON) {
-        guard let title = dict["title"] as? String,
-            let firstName = dict["firstName"] as? String,
-            let lastName = dict["lastName"] as? String,
-            let id = dict["id"] as? String,
-            let avatarURL = dict["avatarURL"] as? String
-            else { fatalError("Could not create movie object from supplied dictionary") }
+    init(title: String, firstName: String, lastName: String, id: String, bio: String, avatarURL: String) {
         self.title = title
         self.firstName = firstName
         self.lastName = lastName
         self.id = id
+        self.bio = bio
         self.avatarURL = avatarURL
     }
     
