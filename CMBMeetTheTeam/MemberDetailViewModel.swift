@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MemberDetailViewModel {
+struct MemberDetailViewModel {
     
     var fullName: String
     var title: String

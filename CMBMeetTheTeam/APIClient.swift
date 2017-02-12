@@ -28,7 +28,7 @@ class APIClient {
                             let lastName = jsonObj["lastName"].string,
                             let title = jsonObj["title"].string {
                         
-                        let member = Member(title: title, firstName: firstName, lastName: lastName, id: id, bio: bio, avatarURL: avatarUrl)
+                        let member = Member(avatarURL: avatarUrl, firstName: firstName, lastName: lastName, id: id, title: title, bio: bio)
                         members.append(member)
                     }
                 }

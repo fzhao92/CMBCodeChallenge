@@ -12,7 +12,7 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-class Member {
+struct Member {
     var avatarURL: String
     var firstName: String
     var lastName: String
@@ -20,13 +20,13 @@ class Member {
     var title: String
     var bio: String
     
-    init(title: String, firstName: String, lastName: String, id: String, bio: String, avatarURL: String) {
-        self.title = title
-        self.firstName = firstName
-        self.lastName = lastName
-        self.id = id
-        self.bio = bio
-        self.avatarURL = avatarURL
-    }
+//    init(title: String, firstName: String, lastName: String, id: String, bio: String, avatarURL: String) {
+//        self.title = title
+//        self.firstName = firstName
+//        self.lastName = lastName
+//        self.id = id
+//        self.bio = bio
+//        self.avatarURL = avatarURL
+//    }
 
 }

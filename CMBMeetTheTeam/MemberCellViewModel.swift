@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MemberCellViewModel {
+struct MemberCellViewModel {
     
     var fullName: String
     var title: String
