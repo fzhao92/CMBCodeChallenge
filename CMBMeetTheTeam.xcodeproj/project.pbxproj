@@ -14,7 +14,7 @@
 		3F5C956B1E4FC8550067DD0C /* team.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F5C956A1E4FC8550067DD0C /* team.json */; };
 		3F5C956D1E4FD2670067DD0C /* MemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5C956C1E4FD2670067DD0C /* MemberCollectionViewCell.swift */; };
 		3F5C95721E4FD6E50067DD0C /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5C95711E4FD6E50067DD0C /* Member.swift */; };
-		3F5C95751E4FD99B0067DD0C /* TeamJSONClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5C95741E4FD99B0067DD0C /* TeamJSONClient.swift */; };
+		3F5C95751E4FD99B0067DD0C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5C95741E4FD99B0067DD0C /* APIClient.swift */; };
 		774B563B160AD9C032359B4B /* Pods_CMBMeetTheTeam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 084C1C5FFA61FA146A382AA1 /* Pods_CMBMeetTheTeam.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 		3F5C956A1E4FC8550067DD0C /* team.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = team.json; path = ../../../Desktop/team.json; sourceTree = "<group>"; };
 		3F5C956C1E4FD2670067DD0C /* MemberCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberCollectionViewCell.swift; sourceTree = "<group>"; };
 		3F5C95711E4FD6E50067DD0C /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
-		3F5C95741E4FD99B0067DD0C /* TeamJSONClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamJSONClient.swift; sourceTree = "<group>"; };
+		3F5C95741E4FD99B0067DD0C /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		79F898DDBC0493461B3D6D71 /* Pods-CMBMeetTheTeam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMBMeetTheTeam.release.xcconfig"; path = "Pods/Target Support Files/Pods-CMBMeetTheTeam/Pods-CMBMeetTheTeam.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +75,7 @@
 				3F076C951E4FC5C7003512FA /* Info.plist */,
 				3F5C956F1E4FD6740067DD0C /* Views */,
 				3F5C95731E4FD9420067DD0C /* Models */,
-				3F5C95741E4FD99B0067DD0C /* TeamJSONClient.swift */,
+				3F5C95781E4FE2EA0067DD0C /*  Networking */,
 			);
 			path = CMBMeetTheTeam;
 			sourceTree = "<group>";
@@ -110,6 +110,14 @@
 				3F5C95711E4FD6E50067DD0C /* Member.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		3F5C95781E4FE2EA0067DD0C /*  Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3F5C95741E4FD99B0067DD0C /* APIClient.swift */,
+			);
+			name = " Networking";
 			sourceTree = "<group>";
 		};
 		AF037625ACB11046F68E63E4 /* Frameworks */ = {
@@ -255,7 +263,7 @@
 				3F5C956D1E4FD2670067DD0C /* MemberCollectionViewCell.swift in Sources */,
 				3F076C8C1E4FC5C7003512FA /* TeamViewController.swift in Sources */,
 				3F076C8A1E4FC5C7003512FA /* AppDelegate.swift in Sources */,
-				3F5C95751E4FD99B0067DD0C /* TeamJSONClient.swift in Sources */,
+				3F5C95751E4FD99B0067DD0C /* APIClient.swift in Sources */,
 				3F5C95721E4FD6E50067DD0C /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

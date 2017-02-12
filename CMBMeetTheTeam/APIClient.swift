@@ -6,10 +6,12 @@
 //  Copyright © 2017 Forrest Zhao. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import SwiftyJSON
+import AlamofireImage
+import Alamofire
 
-class TeamJSONClient {
+class APIClient {
     
     static func synthesizeMemberObj() -> [Member] {
         var members: [Member] = []
@@ -37,6 +39,16 @@ class TeamJSONClient {
             print("Invalid filename/path.")
         }
         return members
+    }
+    
+    static func downloadImage(url: String, completion: @escaping (UIImage?) -> Void) {
+        Alamofire.request(url).responseImage { (response) in
+            if let image = response.result.value {
+                return completion(image)
+            } else {
+                print("Error downloading image!")
+            }
+        }
     }
     
 }

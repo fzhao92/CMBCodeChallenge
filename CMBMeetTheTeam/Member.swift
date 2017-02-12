@@ -9,6 +9,8 @@
 import Foundation
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class Member {
     var avatarURL: String
@@ -17,7 +19,6 @@ class Member {
     var id: String
     var title: String
     var bio: String
-    var avatar: UIImage?
     
     init(title: String, firstName: String, lastName: String, id: String, bio: String, avatarURL: String) {
         self.title = title
@@ -27,38 +28,5 @@ class Member {
         self.bio = bio
         self.avatarURL = avatarURL
     }
-    
-//    func loadImage(_ completion: @escaping (_ Movie: Movie, _ error: NSError?) -> Void) {
-//        guard let url = URL(string: imageUrl) else {
-//            print("Image url messed up")
-//            completion(self, nil)
-//            return
-//        }
-//        let loadRequest = URLRequest(url: url)
-//        
-//        URLSession.shared.dataTask(with: loadRequest, completionHandler: { (data, response, error) in
-//            if let error = error {
-//                print("error downloading image!!!")
-//                print("error image url = \(self.imageUrl)")
-//                DispatchQueue.main.async {
-//                    completion(self, error as NSError?)
-//                }
-//                return
-//            }
-//            
-//            guard let data = data else {
-//                print("image data is nil!!!")
-//                DispatchQueue.main.async {
-//                    completion(self, nil)
-//                }
-//                return
-//            }
-//            
-//            let returnedImage = UIImage(data: data)
-//            self.image = returnedImage
-//            DispatchQueue.main.async {
-//                completion(self, nil)
-//            }
-//        }).resume()
-//    }
+
 }

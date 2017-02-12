@@ -13,9 +13,16 @@ import SwiftyJSON
 class TeamCollectionViewController: UICollectionViewController {
     let numberOfSections = 2
     let memberCellIdentifier = "memberCell"
+    var image: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let collectionViewDataSourceInput = APIClient.synthesizeMemberObj()
+        APIClient.downloadImage(url: collectionViewDataSourceInput[0].avatarURL) { (image) in
+            DispatchQueue.main.async {
+                self.image = image
+            }
+        }
         collectionView?.backgroundColor = UIColor.red
         collectionView?.register(MemberCollectionViewCell.self, forCellWithReuseIdentifier: memberCellIdentifier)
     }

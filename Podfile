@@ -8,5 +8,7 @@ target 'CMBMeetTheTeam' do
   # Pods for CMBMeetTheTeam
   pod 'SwiftyJSON'
   pod 'SnapKit', '~> 3.0'
+  pod 'Alamofire'
+  pod 'AlamofireImage', '~> 3.1'
 
 end
