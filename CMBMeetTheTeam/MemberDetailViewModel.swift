@@ -14,10 +14,4 @@ struct MemberDetailViewModel {
     var title: String
     var bio: String
     
-    init(member: Member) {
-        self.fullName = "\(member.firstName) \(member.lastName)"
-        self.title = member.title
-        self.bio = member.bio
-    }
-    
 }

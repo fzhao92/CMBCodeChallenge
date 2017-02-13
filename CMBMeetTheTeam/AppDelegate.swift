@@ -14,13 +14,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.makeKeyAndVisible()
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.makeKeyAndVisible()
         
-        let flowLayout = UICollectionViewFlowLayout()
-        let customCollectionViewVC = TeamCollectionViewController(collectionViewLayout: flowLayout)
-        self.window?.rootViewController = UINavigationController(rootViewController: customCollectionViewVC)
+//        let teamCollectionVC = TeamCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
+//        let navVC = UINavigationController(rootViewController: teamCollectionVC)
+//        window?.rootViewController = navVC
+//        navVC.navigationBar.tintColor = UIColor.darkGray
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
         
+        let layout = UICollectionViewFlowLayout()
+        let viewController = TeamCollectionViewController(collectionViewLayout: layout)
+        window?.rootViewController = UINavigationController(rootViewController: viewController)
         return true
     }
 

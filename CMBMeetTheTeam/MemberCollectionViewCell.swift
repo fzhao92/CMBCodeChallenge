@@ -11,9 +11,18 @@ import SnapKit
 
 class MemberCollectionViewCell: UICollectionViewCell {
     
+    fileprivate var avatar: UIImageView = UIImageView()
+    fileprivate var nameLabel: UILabel = UILabel()
+    fileprivate var titleLabel: UILabel = UILabel()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundView?.backgroundColor = UIColor.blue
+        backgroundColor = UIColor.white
+        layer.masksToBounds = true
+        layer.cornerRadius = 6
+        setupAvatar()
+        setupNameLabel()
+        setupTitleLabel()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -22,64 +31,70 @@ class MemberCollectionViewCell: UICollectionViewCell {
     
     var memberCellViewModel: MemberCellViewModel! {
         didSet {
-            name = memberCellViewModel.fullName
-            title = memberCellViewModel.title
-            avatarUrl = memberCellViewModel.avatarUrl
-            setupNameLabel()
-            setupTitleLabel()
-            setupAvatar()
+            APIClient.downloadImage(url: memberCellViewModel.avatarUrl) { (image) in
+                if let image = image {
+                    DispatchQueue.main.async {
+                        self.avatar.image = image
+                        print("success!!")
+                    }
+                } else {
+                    //image not downloaded properly, use default no image placeholder
+                }
+            }
+            nameLabel.text = memberCellViewModel.fullName
+            titleLabel.text = memberCellViewModel.title
         }
     }
     
-    var name: String!
-    var title: String!
-    var avatarUrl: String!
-    var avatar: UIImageView!
-    
-    var nameLabel: UILabel!
-    var titleLabel: UILabel!
-    
     func setupNameLabel() {
-        nameLabel = UILabel()
-        nameLabel.text = self.name
+        addSubview(nameLabel)
         nameLabel.snp.makeConstraints { (make) in
-            make.topMargin.equalTo(avatar.snp.bottomMargin)
-            make.leadingMargin.equalToSuperview()
-            make.trailingMargin.equalToSuperview()
-            make.height.equalToSuperview().multipliedBy(CGFloat(1/6))
+            make.topMargin.equalTo(avatar.snp.bottomMargin).offset(30)
+            make.centerX.equalTo(contentView.snp.centerX)
+//            make.leadingMargin.equalTo(contentView.snp.leadingMargin)
+//            make.trailingMargin.equalTo(contentView.snp.trailingMargin)
+//            make.height.equalTo(contentView.snp.height).multipliedBy(1/6.0)
         }
+        nameLabel.backgroundColor = UIColor.orange
+        nameLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 16)
+        nameLabel.textAlignment = .center
+        nameLabel.sizeToFit()
+        nameLabel.lineBreakMode = .byWordWrapping
         nameLabel.minimumScaleFactor = 0.5
+        nameLabel.numberOfLines = 0
+        nameLabel.preferredMaxLayoutWidth = contentView.frame.width * 0.9
+
     }
     
     func setupTitleLabel() {
-        titleLabel = UILabel()
-        titleLabel.text = self.title
+        addSubview(titleLabel)
         titleLabel.snp.makeConstraints { (make) in
-            make.topMargin.equalTo(nameLabel.snp.bottomMargin)
-            make.leadingMargin.equalToSuperview()
-            make.trailingMargin.equalToSuperview()
-            make.height.equalToSuperview().multipliedBy(CGFloat(1/6))
+            make.topMargin.equalTo(nameLabel.snp.bottomMargin).offset(20)
+            make.centerX.equalTo(contentView.snp.centerX)
+//            make.leadingMargin.equalToSuperview()
+//            make.trailingMargin.equalToSuperview()
+//            make.height.equalTo(contentView.snp.height).multipliedBy(1/6.0)
         }
+        titleLabel.backgroundColor = UIColor.yellow
+        titleLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 12)
+        titleLabel.textAlignment = .center
+        titleLabel.sizeToFit()
+        titleLabel.preferredMaxLayoutWidth = contentView.frame.width * 0.9
+        titleLabel.numberOfLines = 0
+        titleLabel.lineBreakMode = .byWordWrapping
         titleLabel.minimumScaleFactor = 0.5
     }
     
     func setupAvatar() {
-        avatar = UIImageView()
-        APIClient.downloadImage(url: memberCellViewModel.avatarUrl) { (image) in
-            if let image = image {
-                DispatchQueue.main.async {
-                    self.avatar.image = image
-                }
-            } else {
-                //image not downloaded properly, use default no image placeholder
-            }
-        }
+        contentView.addSubview(avatar)
+//        avatar.backgroundColor = UIColor.brown
         avatar.snp.makeConstraints { (make) in
-            make.topMargin.equalToSuperview()
-            make.leadingMargin.equalToSuperview()
-            make.trailingMargin.equalToSuperview()
-            make.height.equalToSuperview().multipliedBy(CGFloat(2/3))
+            make.topMargin.equalTo(contentView.snp.top).offset(30)
+            make.leadingMargin.equalTo(contentView.snp.leadingMargin)
+            make.trailingMargin.equalTo(contentView.snp.trailingMargin)
+            make.height.equalTo(contentView.snp.height).multipliedBy(0.6)
         }
+        avatar.contentMode = .scaleAspectFit
     }
     
 }
