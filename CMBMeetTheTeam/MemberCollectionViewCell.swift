@@ -31,14 +31,11 @@ class MemberCollectionViewCell: UICollectionViewCell {
     
     var memberCellViewModel: MemberCellViewModel! {
         didSet {
-            APIClient.downloadImage(url: memberCellViewModel.avatarUrl) { (image) in
-                if let image = image {
+            memberCellViewModel.downloadImage { (success) in
+                if success {
                     DispatchQueue.main.async {
-                        self.avatar.image = image
-                        print("success!!")
+                        self.avatar.image = self.memberCellViewModel.avatar
                     }
-                } else {
-                    //image not downloaded properly, use default no image placeholder
                 }
             }
             nameLabel.text = memberCellViewModel.fullName
@@ -51,12 +48,9 @@ class MemberCollectionViewCell: UICollectionViewCell {
         nameLabel.snp.makeConstraints { (make) in
             make.topMargin.equalTo(avatar.snp.bottomMargin).offset(30)
             make.centerX.equalTo(contentView.snp.centerX)
-//            make.leadingMargin.equalTo(contentView.snp.leadingMargin)
-//            make.trailingMargin.equalTo(contentView.snp.trailingMargin)
-//            make.height.equalTo(contentView.snp.height).multipliedBy(1/6.0)
         }
-        nameLabel.backgroundColor = UIColor.orange
         nameLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 16)
+        nameLabel.textColor = Colors.nameLabelColor
         nameLabel.textAlignment = .center
         nameLabel.sizeToFit()
         nameLabel.lineBreakMode = .byWordWrapping
@@ -71,12 +65,9 @@ class MemberCollectionViewCell: UICollectionViewCell {
         titleLabel.snp.makeConstraints { (make) in
             make.topMargin.equalTo(nameLabel.snp.bottomMargin).offset(20)
             make.centerX.equalTo(contentView.snp.centerX)
-//            make.leadingMargin.equalToSuperview()
-//            make.trailingMargin.equalToSuperview()
-//            make.height.equalTo(contentView.snp.height).multipliedBy(1/6.0)
         }
-        titleLabel.backgroundColor = UIColor.yellow
         titleLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 12)
+        titleLabel.textColor = Colors.titleColorLabel
         titleLabel.textAlignment = .center
         titleLabel.sizeToFit()
         titleLabel.preferredMaxLayoutWidth = contentView.frame.width * 0.9
@@ -87,7 +78,6 @@ class MemberCollectionViewCell: UICollectionViewCell {
     
     func setupAvatar() {
         contentView.addSubview(avatar)
-//        avatar.backgroundColor = UIColor.brown
         avatar.snp.makeConstraints { (make) in
             make.topMargin.equalTo(contentView.snp.top).offset(30)
             make.leadingMargin.equalTo(contentView.snp.leadingMargin)

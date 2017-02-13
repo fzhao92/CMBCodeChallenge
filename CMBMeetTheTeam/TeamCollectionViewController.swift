@@ -20,10 +20,16 @@ class TeamCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         navigationItem.title = "MEET THE TEAM"
         teamCollectionViewModel.populateViewModels()
-        collectionView?.backgroundColor = UIColor.green
+        collectionView?.backgroundColor = UIColor(red:0.34, green:0.62, blue:0.93, alpha:1.0)
         collectionView?.register(MemberCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
+    // - MARK: collectionview delegate methods
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return teamCollectionViewModel.memberCellViewModels.count
@@ -34,10 +40,20 @@ class TeamCollectionViewController: UICollectionViewController {
         cell.memberCellViewModel = teamCollectionViewModel.memberCellViewModels[indexPath.row]
         return cell
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let member = teamCollectionViewModel.memberCellViewModels[indexPath.row]
+        let destVC = MemberDetailViewController()
+        let memberDetailViewModel = MemberDetailViewModel(avatarUrl: member.avatarUrl, fullName: member.fullName, title: member.title, bio: member.bio)
+        destVC.memberDetailViewModel = memberDetailViewModel
+        navigationController?.pushViewController(destVC, animated: true)
+    }
 
 }
 
 extension TeamCollectionViewController: UICollectionViewDelegateFlowLayout {
+    
+    // - MARK: - collectionviewflow delegate methods
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)

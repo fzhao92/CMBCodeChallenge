@@ -12,15 +12,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.makeKeyAndVisible()
         
-//        let teamCollectionVC = TeamCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
-//        let navVC = UINavigationController(rootViewController: teamCollectionVC)
-//        window?.rootViewController = navVC
-//        navVC.navigationBar.tintColor = UIColor.darkGray
+        UINavigationBar.appearance().barTintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "Arial Rounded MT Bold", size: 24)!, NSForegroundColorAttributeName : Colors.nameLabelColor]
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
