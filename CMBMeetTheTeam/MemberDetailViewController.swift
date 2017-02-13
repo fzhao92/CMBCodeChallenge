@@ -21,6 +21,8 @@ class MemberDetailViewController: UIViewController {
         setupTextView()
     }
     
+    // MARK: - Setup view methods
+    
     func setupImageView() {
         if let memberDetailViewModel = memberDetailViewModel {
             view.addSubview(memberImageView)

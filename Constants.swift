@@ -8,10 +8,6 @@
 
 import UIKit
 
-struct Fonts {
-    
-}
-
 struct Colors {
     
     static let backgroundColor = UIColor(red:0.34, green:0.62, blue:0.93, alpha:1.0) //blue

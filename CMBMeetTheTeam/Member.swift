@@ -6,12 +6,6 @@
 //  Copyright © 2017 Forrest Zhao. All rights reserved.
 //
 
-import Foundation
-
-import UIKit
-import Alamofire
-import AlamofireImage
-
 struct Member {
     
     var avatarURL: String

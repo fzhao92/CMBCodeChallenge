@@ -17,9 +17,7 @@ class MemberCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor.white
-        layer.masksToBounds = true
-        layer.cornerRadius = 6
+        setupCellView()
         setupAvatar()
         setupNameLabel()
         setupTitleLabel()
@@ -43,10 +41,18 @@ class MemberCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    // MARK: - Cell and subview setup methods
+    
+    func setupCellView() {
+        backgroundColor = UIColor.white
+        layer.masksToBounds = true
+        layer.cornerRadius = 6
+    }
+    
     func setupNameLabel() {
         addSubview(nameLabel)
         nameLabel.snp.makeConstraints { (make) in
-            make.topMargin.equalTo(avatar.snp.bottomMargin).offset(30)
+            make.topMargin.equalTo(avatar.snp.bottomMargin).offset(45)
             make.centerX.equalTo(contentView.snp.centerX)
         }
         nameLabel.font = UIFont(name: "Arial Rounded MT Bold", size: 16)
@@ -79,12 +85,12 @@ class MemberCollectionViewCell: UICollectionViewCell {
     func setupAvatar() {
         contentView.addSubview(avatar)
         avatar.snp.makeConstraints { (make) in
-            make.topMargin.equalTo(contentView.snp.top).offset(30)
-            make.leadingMargin.equalTo(contentView.snp.leadingMargin)
-            make.trailingMargin.equalTo(contentView.snp.trailingMargin)
+            make.top.equalTo(contentView.snp.top)
+            make.leading.equalTo(contentView.snp.leading)
+            make.trailing.equalTo(contentView.snp.trailing)
             make.height.equalTo(contentView.snp.height).multipliedBy(0.6)
         }
-        avatar.contentMode = .scaleAspectFit
+        avatar.contentMode = .scaleAspectFill
     }
     
 }

@@ -51,10 +51,10 @@ class TeamCollectionViewController: UICollectionViewController {
 
 }
 
+// - MARK: - collectionviewflow delegate methods
+
 extension TeamCollectionViewController: UICollectionViewDelegateFlowLayout {
-    
-    // - MARK: - collectionviewflow delegate methods
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
         let availableWidth = view.frame.width - paddingSpace

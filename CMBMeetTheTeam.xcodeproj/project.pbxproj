@@ -77,7 +77,7 @@
 		3F076C881E4FC5C7003512FA /* CMBMeetTheTeam */ = {
 			isa = PBXGroup;
 			children = (
-				3F5F6FFB1E516ACA00F7F14F /* Constants.swift */,
+				3F11FDF91E51A5D100B7169F /* Constants */,
 				3F5C956A1E4FC8550067DD0C /* team.json */,
 				3F5C95701E4FD67A0067DD0C /* AppDelegate */,
 				3F5C956E1E4FD6670067DD0C /* VIew Controllers */,
@@ -90,6 +90,14 @@
 				3F5C957D1E4FF7B40067DD0C /* View Models */,
 			);
 			path = CMBMeetTheTeam;
+			sourceTree = "<group>";
+		};
+		3F11FDF91E51A5D100B7169F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3F5F6FFB1E516ACA00F7F14F /* Constants.swift */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 		3F5C956E1E4FD6670067DD0C /* VIew Controllers */ = {
