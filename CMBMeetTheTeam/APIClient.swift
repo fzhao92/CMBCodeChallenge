@@ -21,16 +21,7 @@ class APIClient {
                 let jsonObj = JSON(data: data).array
                 guard let jsonArray = jsonObj else { fatalError("JSON is malformed") }
                 for jsonObj in jsonArray {
-                    if let avatarUrl = jsonObj["avatar"].string,
-                            let bio = jsonObj["bio"].string,
-                            let firstName = jsonObj["firstName"].string,
-                            let id = jsonObj["id"].string,
-                            let lastName = jsonObj["lastName"].string,
-                            let title = jsonObj["title"].string {
-                        
-                        let member = Member(avatarURL: avatarUrl, firstName: firstName, lastName: lastName, id: id, title: title, bio: bio)
-                        members.append(member)
-                    }
+                    members.append(Member(dict: jsonObj))
                 }
             } catch let error {
                 print(error.localizedDescription)
